@@ -18,7 +18,10 @@ Questions, answers, and resources for Machine Learning, Data Science, and Data E
 2. Is rotation necessary in PCA? If yes, Why? What will happen if you don’t rotate the components?
     * Rotation is necessary in PCA because it is assumed that the principle components are orthagonal. If the components are not rotated, PCA will perform poorly. It is the orthagonality that maximizes the difference in variance between the two component axes. 
     * Recall that rotation does not change the relative distribution of the data, it just changes the physical location in space. Therefore it makes sense for PCA to rotate the data to maximize the difference in component axes before determining which components are principle. 
+        * Note that if this rotation is not performed, then more principle components will need to be selected to capture the largest variances. 
 3. You are given a data set. The data set has missing values which spread along 1 standard deviation from the median. What percentage of data would remain unaffected? Why?
+   * One standard deviation captures ~68% of the data in a normal distribution (https://en.wikipedia.org/wiki/Standard_deviation#/media/File:Standard_deviation_diagram.svg). So ~32% of the data would not be effected. 
+       * Here a normal distribution is assumed because the standard deviation is measured in relation to the median. 
 4. You are given a data set on cancer detection. You’ve build a classification model and achieved an accuracy of 96%. Why shouldn’t you be happy with your model performance? What can you do about it?
 5. Why is naive Bayes so ‘naive’?
 6. Explain prior probability, likelihood and marginal likelihood in context of naiveBayes algorithm?
