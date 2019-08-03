@@ -16,6 +16,8 @@ Questions, answers, and resources for Machine Learning, Data Science, and Data E
         * PCA assumes that principle components are orthagonal. If the principle components are not orthogonal in the original feature space, PCA will perform poorly.  
         * PCA will yeild the principle components which capture the most variance individually. It may be the case that a combination of non-principle components in the original feature space do a better job of capturing the variance. PCA will neglect to take into account the impact of multiple non-principle components. 
 2. Is rotation necessary in PCA? If yes, Why? What will happen if you don’t rotate the components?
+    * Rotation is necessary in PCA because it is assumed that the principle components are orthagonal. If the components are not rotated, PCA will perform poorly. It is the orthagonality that maximizes the difference in variance between the two component axes. 
+    * Recall that rotation does not change the relative distribution of the data, it just changes the physical location in space. Therefore it makes sense for PCA to rotate the data to maximize the difference in component axes before determining which components are principle. 
 3. You are given a data set. The data set has missing values which spread along 1 standard deviation from the median. What percentage of data would remain unaffected? Why?
 4. You are given a data set on cancer detection. You’ve build a classification model and achieved an accuracy of 96%. Why shouldn’t you be happy with your model performance? What can you do about it?
 5. Why is naive Bayes so ‘naive’?
