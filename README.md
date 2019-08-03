@@ -2,7 +2,11 @@
 Questions, answers, and resources for Machine Learning, Data Science, and Data Engineering interviews.
 
 # Data Science Interview Guides
+* https://towardsdatascience.com/mastering-the-data-science-interview-15f9c0a558a7
 * https://www.analyticsvidhya.com/blog/2018/06/comprehensive-data-science-machine-learning-interview-guide/
+
+# My Favorite Sites for Review of Topics:
+* Brilliant: https://brilliant.org/
 
 ## Data Science Interview Questions Regarding Machine Learning
 * NOTE: All questions are sourced from the following website, all answers are my own: https://www.analyticsvidhya.com/blog/2016/09/40-interview-questions-asked-at-startups-in-machine-learning-data-science/
@@ -28,7 +32,13 @@ Questions, answers, and resources for Machine Learning, Data Science, and Data E
     * What can we do about it? We can undersample or oversample the dataset to account for the inbalance. If we wish to tune the tradeoff between specificity and sensitivity, we can plot a Reciever Operating Characteristic (ROC) curve and vary the tradeoff between specificty and sensitivity. The Area Under the Curve (AUC) of the ROC will allow us to compare model performance, and select the best one for our particular use case in accordance to which is most important: specificity, sensitivity, or a preconcieved combination of both. 
 5. Why is naive Bayes so ‘naive’?
     * Naive Bayes operates under the assumption that features in the data set are all equally important and statistically independent. This is rarely the case in real life, where often features are interrelated. 
-6. Explain prior probability, likelihood and marginal likelihood in context of naiveBayes algorithm?
+6. Explain prior probability, likelihood and marginal likelihood in context of the Naive Bayes algorithm.
+    * The prior probability (posterior) is the known (possibly pre-measured) probability of the event occuring. For instance, in the flip of a fair coin, the posterior probabilty of obtaining a heads is 0.5. This value can be identified emperically, or known in advance. But it is provided as-is without any additional pre-requisite knowledge. 
+    * The likelihood is the probability (conditional probability) that an event (a measured set of successes) will occuring by knowing probability that an individual success will occur.
+        * See: https://qr.ae/TWvWSY
+    * In the context of naive bayes, the maximum likelihood is used as the output of the model. 
+        * See: http://www.cs.columbia.edu/~mcollins/em.pdf
+    * The marginal likelihood
 7. You are working on a time series data set. You manager has asked you to build a high accuracy model. You start with the decision tree algorithm, since you know it works fairly well on all kinds of data. Later, you tried a time series regression model and got higher accuracy than decision tree model. Can this happen? Why?
 8. You are assigned a new project which involves helping a food delivery company save more money. The problem is, company’s delivery team aren’t able to deliver food on time. As a result, their customers get unhappy. And, to keep them happy, they end up delivering food for free. Which machine learning algorithm can save them?
 9. You came to know that your model is suffering from low bias and high variance. Which algorithm should you use to tackle it? Why?
