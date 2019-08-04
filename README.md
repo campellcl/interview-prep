@@ -90,14 +90,165 @@ Questions, answers, and resources for Machine Learning, Data Science, and Data E
 39. What do you understand by Bias Variance trade off?
 40. OLS is to linear regression. Maximum likelihood is to logistic regression. Explain the statement.
 
-
-
-
-
-
-
-
-
+## Data Science Questions Regarding Probability (https://www.analyticsvidhya.com/blog/2017/04/40-questions-on-probability-for-all-aspiring-data-scientists/)
+1) Let A and B be events on the same sample space, with P (A) = 0.6 and P (B) = 0.7. Can these two events be disjoint?
+2) Alice has 2 kids and one of them is a girl. What is the probability that the other child is also a girl? You can assume that there are an equal number of males and females in the world.
+3) A fair six-sided die is rolled twice. What is the probability of getting 2 on the first roll and not getting 4 on the second roll?
+4) P(A U B U C) = P(A n C^{c}) + P(C) + P(B n A^{c} n C^{c})
+True or False?
+5) Consider a tetrahedral die and roll it twice. What is the probability that the number on the first roll is strictly higher than the number on the second roll? Note: A tetrahedral die has only four sides (1, 2, 3 and 4). 
+6) Which of the following options cannot be the probability of any event? 
+A) -0.00001
+B) 0.5
+C) 1.001
+7) Anita randomly picks 4 cards from a deck of 52-cards and places them back into the deck ( Any set of 4 cards is equally likely ). Then, Babita randomly chooses 8 cards out of the same deck ( Any set of 8 cards is equally likely). Assume that the choice of 4 cards by Anita and the choice of 8 cards by Babita are independent. What is the probability that all 4 cards chosen by Anita are in the set of 8 cards chosen by Babita?
+8) A player is randomly dealt a sequence of 13 cards from a deck of 52-cards. All sequences of 13 cards are equally likely. In an equivalent model, the cards are chosen and dealt one at a time. When choosing a card, the dealer is equally likely to pick any of the cards that remain in the deck. If you dealt 13 cards, what is the probability that the 13th card is a King?
+9) A fair six-sided die is rolled 6 times. What is the probability of getting all outcomes as unique?
+10) A group of 60 students is randomly split into 3 classes of equal size. All partitions are equally likely. Jack and Jill are two students belonging to that group. What is the probability that Jack and Jill will end up in the same class? 
+11) We have two coins, A and B. For each toss of coin A, the probability of getting head is 1/2 and for each toss of coin B, the probability of getting Heads is 1/3. All tosses of the same coin are independent. We select a coin at random and toss it till we get a head. The probability of selecting coin A is ¼ and coin B is 3/4. What is the expected number of tosses to get the first heads?
+12) Suppose a life insurance company sells a $240,000 one year term life insurance policy to a 25-year old female for $210. The probability that the female survives the year is .999592. Find the expected value of this policy for the insurance company.
+13) P(A n B n C^{c}) = P(A)P(C^{c} n A | A) P(B | A n C^{c})
+True or False?
+14) When an event A independent of itself?
+A) Always
+B) If and only if P(A)=0
+C) If and only if P(A)=1
+D) If and only if P(A)=0 or 1
+15) Suppose you’re in the final round of “Let’s make a deal” game show and you are supposed to choose from three doors – 1, 2 & 3. One of the three doors has a car behind it and other two doors have goats. Let’s say you choose Door 1 and the host opens Door 3 which has a goat behind it. To assure the probability of your win, which of the following options would you choose.
+A) Switch your choice
+B) Retain your choice
+C) It doesn’t matter probability of winning or losing is the same with or without revealing one door
+16) Cross-fertilizing a red and a white flower produces red flowers 25% of the time. Now we cross-fertilize five pairs of red and white flowers and produce five offspring. What is the probability that there are no red flower plants in the five offspring? 
+A) 23.7%
+B) 37.2%
+C) 22.5%
+D) 27.3%
+17) A roulette wheel has 38 slots – 18 red, 18 black, and 2 green. You play five games and always bet on red slots. How many games can you expect to win?
+A) 1.1165
+B) 2.3684
+C) 2.6316
+D) 4.7368
+18) A roulette wheel has 38 slots, 18 are red, 18 are black, and 2 are green. You play five games and always bet on red. What is the probability that you win all the 5 games?
+A) 0.0368
+B) 0.0238
+C) 0.0526
+D) 0.0473
+19) Some test scores follow a normal distribution with a mean of 18 and a standard deviation of 6. What proportion of test takers have scored between 18 and 24?
+A) 20%
+B) 22%
+C) 34%
+D) None of the above
+20) A jar contains 4 marbles. 3 Red & 1 white. Two marbles are drawn with replacement after each draw. What is the probability that the same color marble is drawn twice?
+A) 1/2
+B) 1/3
+C) 5/8
+D) 1/8
+21) Which of the following events is most likely? 
+A) At least one 6, when 6 dice are rolled
+B) At least 2 sixes when 12 dice are rolled
+C) At least 3 sixes when 18 dice are rolled
+D) All the above have same probability
+22) Suppose you were interviewed for a technical role. 50% of the people who sat for the first interview received the call for second interview. 95% of the people who got a call for second interview felt good about their first interview. 75% of people who did not receive a second call, also felt good about their first interview. If you felt good after your first interview, what is the probability that you will receive a second interview call?
+A) 66%
+B) 56%
+C) 75%
+D) 85%
+23) A coin of diameter 1-inches is thrown on a table covered with a grid of lines each two inches apart. What is the probability that the coin lands inside a square without touching any of the lines of the grid? You can assume that the person throwing has no skill in throwing the coin and is throwing it randomly. 
+A) 1/2
+B) 1/4
+C) Π/3
+D) 1/3
+24) There are a total of 8 bows of 2 each of green, yellow, orange & red. In how many ways can you select 1 bow? 
+A) 1
+B) 2
+C) 4
+D) 8
+25) Consider the following probability density function: What is the probability for X≤6 i.e. P(x≤6)
+A) 0.3935
+B) 0.5276
+C) 0.1341
+D) 0.4724
+26) In a class of 30 students, approximately what is the probability that two of the students have their birthday on the same day (defined by same day and month) (assuming it’s not a leap year)?
+For example – Students with birthday 3rd Jan 1993 and 3rd Jan 1994 would be a favorable event.
+A) 49%
+B) 52%
+C) 70%
+D) 35%
+27) Ahmed is playing a lottery game where he must pick 2 numbers from 0 to 9 followed by an English alphabet (from 26-letters). He may choose the same number both times.
+If his ticket matches the 2 numbers and 1 letter drawn in order, he wins the grand prize and receives $10405. If just his letter matches but one or both of the numbers do not match, he wins $100. Under any other circumstance, he wins nothing. The game costs him $5 to play. Suppose he has chosen 04R to play.
+What is the expected net profit from playing this ticket?
+A) $-2.81
+B) $2.81
+C) $-1.82
+D) $1.82
+28) Assume you sell sandwiches. 70% people choose egg, and the rest choose chicken. What is the probability of selling 2 egg sandwiches to the next 3 customers?
+A) 0.343
+B) 0.063
+C) 0.44
+D) 0.027
+29) HIV is still a very scary disease to even get tested for. The US military tests its recruits for HIV when they are recruited. They are tested on three rounds of Elisa( an HIV test) before they are termed to be positive.
+The prior probability of anyone having HIV is 0.00148. The true positive rate for Elisa is 93% and the true negative rate is 99%.
+What is the probability that a recruit has HIV, given he tested positive on first Elisa test? The prior probability of anyone having HIV is 0.00148. The true positive rate for Elisa is 93% and the true negative rate is 99%.
+A) 12%
+B) 80%
+C) 42%
+D) 14%
+30) What is the probability of having HIV, given he tested positive on Elisa the second time as well.
+The prior probability of anyone having HIV is 0.00148. The true positive rate for Elisa is 93% and the true negative rate is 99%.
+A) 20%
+B) 42%
+C) 93%
+D) 88%
+31) Suppose you’re playing a game in which we toss a fair coin multiple times. You have already lost thrice where you guessed heads but a tails appeared. Which of the below statements would be correct in this case?
+A) You should guess heads again since the tails has already occurred thrice and its more likely for heads to occur now
+B) You should say tails because guessing heads is not making you win
+C) You have the same probability of winning in guessing either, hence whatever you guess there is just a 50-50 chance of winning or losing
+D) None of these
+32) The inference using the frequentist approach will always yield the same result as the Bayesian approach.
+A) TRUE
+B) FALSE
+33) Hospital records show that 75% of patients suffering from a disease die due to that disease. What is the probability that 4 out of the 6 randomly selected patients recover?
+A) 0.17798
+B) 0.13184
+C) 0.03295
+D) 0.35596
+34) The students of a particular class were given two tests for evaluation. Twenty-five percent of the class cleared both the tests and forty-five percent of the students were able to clear the first test.
+Calculate the percentage of students who passed the second test given that they were also able to pass the first test.
+A) 25%
+B) 42%
+C) 55%
+D) 45%
+35) While it is said that the probabilities of having a boy or a girl are the same, let’s assume that the actual probability of having a boy is slightly higher at 0.51. Suppose a couple plans to have 3 children. What is the probability that exactly 2 of them will be boys?
+A) 0.38
+B) 0.48
+C) 0.58
+D) 0.68
+E) 0.78
+36) Heights of 10 year-olds, regardless of gender, closely follow a normal distribution with mean 55 inches and standard deviation 6 inches. Which of the following is true?
+A) We would expect more number of 10 year-olds to be shorter than 55 inches than the number of them who are taller than 55 inches
+B) Roughly 95% of 10 year-olds are between 37 and 73 inches tall
+C) A 10-year-old who is 65 inches tall would be considered more unusual than a 10-year-old who is 45 inches tall
+D) None of these
+37) About 30% of human twins are identical, and the rest are fraternal. Identical twins are necessarily the same sex, half are males and the other half are females. One-quarter of fraternal twins are both males, one-quarter both female, and one-half are mixed: one male, one female. You have just become a parent of twins and are told they are both girls. Given this information, what is the probability that they are identical?
+A) 50%
+B) 72%
+C) 46%
+D) 33%
+38) Rob has fever and the doctor suspects it to be typhoid. To be sure, the doctor wants to conduct the test. The test results positive when the patient actually has typhoid 80% of the time. The test gives positive when the patient does not have typhoid 10% of the time. If 1% of the population has typhoid, what is the probability that Rob has typhoid provided he tested positive?
+A) 12%
+B) 7%
+C) 25%
+D) 31.5%
+39) Jack is having two coins in his hand. Out of the two coins, one is a real coin and the second one is a faulty one with Tails on both sides. He blindfolds himself to choose a random coin and tosses it in the air. The coin falls down with Tails facing upwards. What is the probability that this tail is shown by the faulty coin?
+A) 1/3
+B) 2/3
+C) 1/2
+D) 1/4
+40) A fly has a life between 4-6 days. What is the probability that the fly will die at exactly 5 days?
+A) 1/2
+B) 1/4
+C) 1/3
+D) 0
 
 
 
