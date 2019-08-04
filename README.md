@@ -59,6 +59,8 @@ Questions, answers, and resources for Machine Learning, Data Science, and Data E
    * GBM stands for Gradient Boosting Machine. I am not familiar with gradient boosting, but have read about it briefly here: https://towardsdatascience.com/understanding-gradient-boosting-machines-9be756fe76ab. Looks like these kinds of models would be prone to overfitting. An ensemble of overfitted models, is still going to overfit. Perhaps the features are not representative of the target function, or the size of the dataset is too small to learn a meaningful signal?
    * The authors point out that since all five GBM models have no accuracy improvement, it suggests that the models are correlated. Hence, all models provide roughly the same information. An ensemble of correlated models is a poor choice. 
 12. How is kNN different from kmeans clustering?
+   * K-Nearest Neighbors uses only the nearest neighbors. K-Means uses a nearest centroid to cluster. Hence K-Means is a better choice if data is naturally distributed in clumps around a series of centroids. If data appears to be randomly distributed, perhaps KNN is a better choice, as KNN allows for complex decision boundaries to be drawn with relatively low choices in K. 
+      * NOTE: I missed the mark on this one. The authors point out that Kmeans is unsupervised, whereas KNN is a classification (or regression) algorithm. This is a topic I should review. Most of the data I work with is considered supervised learning.  
 13. How is True Positive Rate and Recall related? Write the equation.
 14. You have built a multiple regression model. Your model R² isn’t as good as you wanted. For improvement, your remove the intercept term, your model R² becomes 0.8 from 0.3. Is it possible? How?
 15. After analyzing the model, your manager has informed that your regression model is suffering from multicollinearity. How would you check if he’s true? Without losing any information, can you still build a better model?
@@ -69,6 +71,51 @@ Questions, answers, and resources for Machine Learning, Data Science, and Data E
 20. Is it possible capture the correlation between continuous and categorical variable? If yes, how?
 21. Both being tree based algorithm, how is random forest different from Gradient boosting algorithm (GBM)?
 22. Running a binary classification tree algorithm is the easy part. Do you know how does a tree splitting takes place i.e. how does the tree decide which variable to split at the root node and succeeding nodes?
+23. You’ve built a random forest model with 10000 trees. You got delighted after getting training error as 0.00. But, the validation error is 34.23. What is going on? Haven’t you trained your model perfectly?
+24. You’ve got a data set to work having p (no. of variable) > n (no. of observation). Why is OLS as bad option to work with? Which techniques would be best to use? Why?
+25. What is convex hull ? (Hint: Think SVM)
+26. We know that one hot encoding increasing the dimensionality of a data set. But, label encoding doesn’t. How ?
+27. What cross validation technique would you use on time series data set? Is it k-fold or LOOCV?
+28. You are given a data set consisting of variables having more than 30% missing values? Let’s say, out of 50 variables, 8 variables have missing values higher than 30%. How will you deal with them?
+29. ‘People who bought this, also bought…’ recommendations seen on amazon is a result of which algorithm?
+30. What do you understand by Type I vs Type II error?
+31. You are working on a classification problem. For validation purposes, you’ve randomly sampled the training data set into train and validation. You are confident that your model will work incredibly well on unseen data since your validation accuracy is high. However, you get shocked after getting poor test accuracy. What went wrong?
+32. You have been asked to evaluate a regression model based on R², adjusted R² and tolerance. What will be your criteria?
+33. In k-means or kNN, we use euclidean distance to calculate the distance between nearest neighbors. Why not manhattan distance?
+34. Explain machine learning to me like a 5 year old.
+35. I know that a linear regression model is generally evaluated using Adjusted R² or F value. How would you evaluate a logistic regression model?
+36. Considering the long list of machine learning algorithm, given a data set, how do you decide which one to use?
+37. Do you suggest that treating a categorical variable as continuous variable would result in a better predictive model?
+38. When does regularization becomes necessary in Machine Learning?
+39. What do you understand by Bias Variance trade off?
+40. OLS is to linear regression. Maximum likelihood is to logistic regression. Explain the statement.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
