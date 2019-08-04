@@ -92,23 +92,66 @@ Questions, answers, and resources for Machine Learning, Data Science, and Data E
 
 ## Data Science Questions Regarding Probability (https://www.analyticsvidhya.com/blog/2017/04/40-questions-on-probability-for-all-aspiring-data-scientists/)
 1) Let A and B be events on the same sample space, with P (A) = 0.6 and P (B) = 0.7. Can these two events be disjoint?
+A) Yes
+B) No
 2) Alice has 2 kids and one of them is a girl. What is the probability that the other child is also a girl? You can assume that there are an equal number of males and females in the world.
+A) 0.5
+B) 0.25
+C) 0.333
+D) 0.75
 3) A fair six-sided die is rolled twice. What is the probability of getting 2 on the first roll and not getting 4 on the second roll?
+A) 1/36
+B) 1/18
+C) 5/36
+D) 1/6
+E) 1/3
 4) P(A U B U C) = P(A n C^{c}) + P(C) + P(B n A^{c} n C^{c})
 True or False?
-5) Consider a tetrahedral die and roll it twice. What is the probability that the number on the first roll is strictly higher than the number on the second roll? Note: A tetrahedral die has only four sides (1, 2, 3 and 4). 
+A) True
+B) False
+5) Consider a tetrahedral die and roll it twice. What is the probability that the number on the first roll is strictly higher than the number on the second roll? Note: A tetrahedral die has only four sides (1, 2, 3 and 4).
+A) 1/2
+B) 3/8
+C) 7/16
+D) 9/16
 6) Which of the following options cannot be the probability of any event? 
 A) -0.00001
 B) 0.5
 C) 1.001
 7) Anita randomly picks 4 cards from a deck of 52-cards and places them back into the deck ( Any set of 4 cards is equally likely ). Then, Babita randomly chooses 8 cards out of the same deck ( Any set of 8 cards is equally likely). Assume that the choice of 4 cards by Anita and the choice of 8 cards by Babita are independent. What is the probability that all 4 cards chosen by Anita are in the set of 8 cards chosen by Babita?
+A){}^{48}C_{4} x {}^{52}C_{4}
+B){}^{48}C_{4} x {}^{52}C_{8}
+C){}^{48}C_{8} x {}^{52}C_{8}
+D) None of the above
 8) A player is randomly dealt a sequence of 13 cards from a deck of 52-cards. All sequences of 13 cards are equally likely. In an equivalent model, the cards are chosen and dealt one at a time. When choosing a card, the dealer is equally likely to pick any of the cards that remain in the deck. If you dealt 13 cards, what is the probability that the 13th card is a King?
+A) 1/52
+B) 1/13
+C) 1/26
+D) 1/12
 9) A fair six-sided die is rolled 6 times. What is the probability of getting all outcomes as unique?
-10) A group of 60 students is randomly split into 3 classes of equal size. All partitions are equally likely. Jack and Jill are two students belonging to that group. What is the probability that Jack and Jill will end up in the same class? 
+A) 0.01543
+B) 0.01993
+C) 0.23148
+D) 0.03333
+10) A group of 60 students is randomly split into 3 classes of equal size. All partitions are equally likely. Jack and Jill are two students belonging to that group. What is the probability that Jack and Jill will end up in the same class?
+A) 1/3
+B) 19/59
+C) 18/58
+D) 1/2
 11) We have two coins, A and B. For each toss of coin A, the probability of getting head is 1/2 and for each toss of coin B, the probability of getting Heads is 1/3. All tosses of the same coin are independent. We select a coin at random and toss it till we get a head. The probability of selecting coin A is ¼ and coin B is 3/4. What is the expected number of tosses to get the first heads?
+A) 2.75
+B) 3.35
+C) 4.13
+D) 5.33
 12) Suppose a life insurance company sells a $240,000 one year term life insurance policy to a 25-year old female for $210. The probability that the female survives the year is .999592. Find the expected value of this policy for the insurance company.
+A) $131
+B) $140
+C) $112
+D) $125
 13) P(A n B n C^{c}) = P(A)P(C^{c} n A | A) P(B | A n C^{c})
 True or False?
+A) True
+B) False
 14) When an event A independent of itself?
 A) Always
 B) If and only if P(A)=0
