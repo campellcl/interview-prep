@@ -92,8 +92,8 @@ Questions, answers, and resources for Machine Learning, Data Science, and Data E
 
 ## Data Science Questions Regarding Probability (https://www.analyticsvidhya.com/blog/2017/04/40-questions-on-probability-for-all-aspiring-data-scientists/)
 1) Let A and B be events on the same sample space, with P (A) = 0.6 and P (B) = 0.7. Can these two events be disjoint?
-A) Yes
-B) No
+   A) Yes
+   B) No
 2) Alice has 2 kids and one of them is a girl. What is the probability that the other child is also a girl? You can assume that there are an equal number of males and females in the world.
 A) 0.5
 B) 0.25
