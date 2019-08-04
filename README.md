@@ -38,7 +38,8 @@ Questions, answers, and resources for Machine Learning, Data Science, and Data E
         * See: https://qr.ae/TWvWSY
     * In the context of naive bayes, the maximum likelihood is used as the output of the model. 
         * See: http://www.cs.columbia.edu/~mcollins/em.pdf
-    * The marginal likelihood
+    * The marginal likelihood is the denominator of the standard Bayes theorem equation (https://qr.ae/TWvegC). For some practical interpretation of this, I like this answer (https://www.reddit.com/r/MachineLearning/comments/lirni/what_is_marginal_likelihood/). In short:
+        * "Marginal likelihood is the expected probability of seeing the data over all the parameters theta, weighted appropriately by the prior. Bayes' law then says something like the conditional probability of a parameter at some value is the ratio of the likelihood of the data for that particular value over the expected likelihood from all values. Which is kind of intuitive as well."
 7. You are working on a time series data set. You manager has asked you to build a high accuracy model. You start with the decision tree algorithm, since you know it works fairly well on all kinds of data. Later, you tried a time series regression model and got higher accuracy than decision tree model. Can this happen? Why?
 8. You are assigned a new project which involves helping a food delivery company save more money. The problem is, company’s delivery team aren’t able to deliver food on time. As a result, their customers get unhappy. And, to keep them happy, they end up delivering food for free. Which machine learning algorithm can save them?
 9. You came to know that your model is suffering from low bias and high variance. Which algorithm should you use to tackle it? Why?
