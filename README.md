@@ -6,7 +6,9 @@ Questions, answers, and resources for Machine Learning, Data Science, and Data E
 * https://www.analyticsvidhya.com/blog/2018/06/comprehensive-data-science-machine-learning-interview-guide/
 
 # My Favorite Sites for Review of Topics:
-* Brilliant: https://brilliant.org/
+* For Mathematics (Statistics, Probability, Linear Algebra):
+   * Brilliant: https://brilliant.org/
+   * Khan Academy: https://www.khanacademy.org/
 
 ## Data Science Interview Questions Regarding Machine Learning
 * NOTE: All questions are sourced from the following website, all answers are my own: https://www.analyticsvidhya.com/blog/2016/09/40-interview-questions-asked-at-startups-in-machine-learning-data-science/
