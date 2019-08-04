@@ -30,7 +30,7 @@ Questions, answers, and resources for Machine Learning, Data Science, and Data E
   * Artificial Intelligence: A Modern Approach: http://aima.cs.berkeley.edu/
 
 # The Best Instructors for This Material (Hands Down):
-* NOTE: Simply google: <topic you are stuck on> <instructor name>
+* NOTE: Simply google: \<topic you are stuck on\> \<instructor name\>
 * Andrew Ng
 * Geoffery Hinton
 * Sebastian Thrun & Peter Norvig
