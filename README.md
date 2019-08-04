@@ -9,6 +9,31 @@ Questions, answers, and resources for Machine Learning, Data Science, and Data E
 * For Mathematics (Statistics, Probability, Linear Algebra):
    * Brilliant: https://brilliant.org/
    * Khan Academy: https://www.khanacademy.org/
+* For Programming In General:
+  * Hacker Rank: https://www.hackerrank.com/
+  * Leet Code: https://leetcode.com/
+* For SQL:
+  * SQL ZOO: https://sqlzoo.net/
+* For Machine Learning:
+  * 
+# My Favorite Textbooks and Resources for Learning These Topics Initially
+* For Statistics:
+  * Elements of Statistical Learning: https://web.stanford.edu/~hastie/ElemStatLearn/
+  * Explained Visually: http://setosa.io/ev/
+* For Data Mining:
+  * Introduction to Data Mining: https://www-users.cs.umn.edu/~kumar001/dmbook/index.php
+* For Machine Learning: 
+  * NOTE: There are honestly too many honerable mentions to list them all... but I'll give it a shot. 
+  * Python Machine Learning: https://sebastianraschka.com/books.html
+  * The Deep Learning Book: https://www.deeplearningbook.org/
+* For Artificial Intelligence:
+  * Artificial Intelligence: A Modern Approach: http://aima.cs.berkeley.edu/
+
+# The Best Instructors for This Material (Hands Down):
+* NOTE: Simply google: <topic you are stuck on> <instructor name>
+* Andrew Ng
+* Geoffery Hinton
+* Sebastian Thrun & Peter Norvig
 
 ## Data Science Interview Questions Regarding Machine Learning
 * NOTE: All questions are sourced from the following website, all answers are my own: https://www.analyticsvidhya.com/blog/2016/09/40-interview-questions-asked-at-startups-in-machine-learning-data-science/
