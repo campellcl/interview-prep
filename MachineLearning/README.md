@@ -42,6 +42,18 @@ squashed? What is the range of z?
     * The Adaline activation function allows the algorithm to still learn from the examples that are predicted correctly,
     this is not the case in the Perceptron algorithm. 
 2. What is the difference between the Perceptron and Adaline update rules?
+    * The perceptron update rule:
+        * Takes into account the predicted target class while performing weight updates.
+        * Only learns from classes which were misclassified. 
+        * May be implemented with sequential weight updates, which is a poor choice
+        (as it introduces ordering dependency upon the weight vector for training). 
+    * The adaline update rule:
+        * Takes into account more than just the quantized target label, i.e.
+        the adaline update rule operates on the continuous variable net-input: `z`.
+        * Learns from classes which were misclassified, as it updates the w vector to
+        point toward the positive samples and moves it away from the negative samples if necessary.
+        * Is commonly implemented with vectorization, performing an update to the entire w vector
+        per iteration, thereby removing the ordering dependency of training samples. 
 3. The Perceptron `fit` method calls `predict` whereas the Adaline `fit` method calls `net_input`. Why?
     * In the case of calling `predict` we want the estimated target label. In the case of calling `net_input` we want a
     real value (continuous). The implications of this are somewhat severe. Adaline has an activation function and is
