@@ -50,7 +50,7 @@ squashed? What is the range of z?
     * The adaline update rule:
         * Takes into account more than just the quantized target label, i.e.
         the adaline update rule operates on the continuous variable net-input: `z`.
-        * Learns from classes which were misclassified, as it updates the w vector to
+        * Learns from classes which were appropriately classified, as it updates the w vector to
         point toward the positive samples and moves it away from the negative samples if necessary.
         * Is commonly implemented with vectorization, performing an update to the entire w vector
         per iteration, thereby removing the ordering dependency of training samples. 
@@ -73,17 +73,39 @@ fundamentally change the learning algorithm?
 
 ### Chapter Three: A tour of Machine Learning Classifiers Using Scikit-learn (Logistic Regression):
 1. What is the No Free Lunch Theorem?
+    * The no free lunch theorem states that no single classifier is the best in all situations.
+    There is no one model that works best for every problem.
 2. During feature scaling with the `sklearn.preprocessing`'s `StandardScalar` object, the `StandardScalar` is `fit` to
 the training data. What does it need to compute in order to apply the transformation? Why is it important to apply the
 transformation to the training and testing data?
+    * The standard scalar needs the mean of the training data, and the standard deviation of the training samples. 
+    * This is necessary because standardization transforms the data to have a mean of zero and a standard deviation of 1 (unit variance).
 3. Given the Logistic regression cost function. What is the cost for y=1 and phi(z)=1? What is the cost for y=1 and phi(z)
 =1/e? What is the cost for y=1 and phi(z)=1/e^2?
 4. Given the code for the AdalineGD classifier, what single function must you change in order for it to learn the coefficients
 for the Logistic Regression classifier?
 5. `lr = LogisticRegression(C=1000.0, random_state=0)` What is `C` and `random_state`? Where are `eta` and `n_iter`?
 6. What is regularization? What is the problem with model coefficients which have a large magnitude?
-7. What is L2 regularization? What does adding regularization do to the model's gradient?
- 
+    * Regularization is intended to address overfitting by adding a penalizing term to the loss function.
+    This, in turn makes the parameters more likely to converge to smaller values during training.
+    * The problem with model coefficients with a large magnitude is that they play a disproportionate role in
+    the update of the weight vector during the net-input dot-product. This can mean that very large values
+    tend to quickly dominate the training process and most of the training cycles are spent slowly lowering the
+    weights which impact the large coefficients. 
+        * To combat this, regularization is often used and/or normalization.
+7. What is L1 regularization? What does adding regularization do to the model's gradient?
+    * L1 regularization is known as lasso or L1-Norm. In the case of lasso, the L1 penalty "has the effect of forcing
+    some of the coefficient estimates to be exactly equal to zero when the tuning parameter lambda is sufficiently large". -[towardsdatascience](https://towardsdatascience.com/regularization-in-machine-learning-76441ddcf99a)
+    * L1 regularization can be used to perform feature selection, and is said to result in sparse models.
+    * Recall that the gradient is a measure of the cost function with respect to the models parameters. The gradient depends on the
+    inputs of the model, the current values of the model's parameters, and the cost function.
+        * In both the cases of L1 and L2 regularization, the models gradient will be smaller as the weights themselves will be smaller
+        and tend toward zero. There is an excellent post on this [here](https://towardsdatascience.com/understanding-the-scaling-of-l%C2%B2-regularization-in-the-context-of-neural-networks-e3d25f8b50db).
+7. What is L2 regularization?
+    * L2 regularization is known as ridge regression. L2 "shrinks the coefficients for least important predictors 
+    very close to zero. But it will never make them exactly zero." -[towardsdatascience](https://towardsdatascience.com/regularization-in-machine-learning-76441ddcf99a)
+        * The result of this is that the final model still contains all original predictors/features. 
+    
 ### Chapter Three: A tour of Machine Learning Classifiers Using Scikit-learn (Linear SVM):
 1. Why is Logistic Regression poorly named?
     * Logistic regression is a classification methodology, not a regression methodology. 
