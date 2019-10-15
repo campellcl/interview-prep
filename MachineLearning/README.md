@@ -2,14 +2,40 @@
 ## Python Machine Learning (Sabastian Rashka)
 ### Chapter Two: Training Machine Learning Algorithms for Classification (Perceptron):
 1. What is the benefit of moving theta? What must the values of x_0 and w_0 be?
+    * Moving theta allows us to compute the weights and the threshold 
+    all at once using a single linear algebra expression.
+    * X_0 = 1 and W_0 = -theta
 2. An activation function takes the net input z= w^{T}x and squashes it into a binary output (-1 or 1). What is being
 squashed? What is the range of z?
+    * Z is a continuous variable which ranges from - infinity to + infinity.
+    * Z is the "net-input" that is being squashed/quantized to be either -1
+    or 1 in the case of the perceptron's activation function.
 3. What is the learning rate and why is it important?
+    * The learning rate controls the size of the updates to the weight
+    vector with respect to the loss gradient.
+    * The learning rate is important because it directly impacts the
+    number of training epochs before convergence.
+        * If the learning rate is too low, it may take forever to converge.
+        * If the learning rate is too large, the algorithm may never converge, as it
+        bounces around the bottom of the gradient parabola. 
 4. Raschka writes, It is important to note that the convergence of the perceptron is only guaranteed if the two classes
  are linearly separable and the learning rate is sufficiently small." What does it mean to converge? Why can't it happen
  if there are misclassified samples?
+    * In this case we are talking about the convergence of the gradient 
+    descent algorithm toward what we hope is a global minima.
+        * To be more specific, we are talking about the slope of the gradient function.
+        At convergence, the slope should be near zero.
+    * The perceptron learning algorithm is only guaranteed to converge if the data is linearly separable,
+    and a small enough learning rate is used.
 6. What is vectorization and why do we want it?
+    * Vectorization is the process of converting code to use linear algebra operations on entire
+    vectors instead of incrementally performing updates. 
+    * Vectorization provides many benefits including: increased performance, 
+    clearer to read code, and non-sequential variable updates.
 7. What is the one-vs.-all technique and why do we use it?
+    * The one-vs.-all technique is a method of extending a binary classifier for use with three or more classes.
+    * A classifier is trained in each instance with knowledge of one class vs. all of the rest. This allows a simple
+    binary classifier to perform multi-class classification.
 
 ### Chapter Two: Training Machine Learning Algorithms for Classification (Adaline):
 1. According to the textbook what is the "main advantage" of the Adaline activation function compared to the setp function used in the Perceptron?
