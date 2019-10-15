@@ -162,23 +162,50 @@ indicate when errors are computed for each of the classifiers specified above.
     in a higher dimensional space. It can be helpful to think of the kernel as a similarity measure.
     * The kernel method is prominent in nonlinear Support Vector Machines.
 2. What is the computational complexity of computing the dot product between two vectors?
-    * In teh quadratic space...
-3. What is the kernel trick? 
+    * Lets say we have m features and we want to dot product two different feature vectors (of length m).
+    This is simply O(m) operational complexity. We will have m terms for each feature vector. Each one will be a multiplication, and will be
+    followed by an addition. This plays out to linear time: O(m).
+3. What is the kernel trick?
+    * The kernel trick is the useage of a kernel function to perform the
+     projection of vectors to an infinite dimensional space. The kernel 
+     trick allows a efficient way to transform data into higher dimensions. 
+     * The kenrel trick works by performing a dot product of x^{T}y in the original feature space, 
+     instead of performing the computation in the projected feature space.
+     * It is possible to perform a dot product (as in the SVM) in O(m) 
+     time in the original feature space, instead of O(m^2) time in the projected feature space.
+        * A good resource on this: [medium](https://medium.com/@zxr.nju/what-is-the-kernel-trick-why-is-it-important-98a98db0961d)
 4. How many terms are there after mapping to a third-order polynomial from m=2 dimensions? What is the big-O complexity
 of the dot-product in the higher dimensional space? What is the computational complexity after using the "kernel trick"?
+    * I need to double check this, but..:
+        * dfd
+        * The big-O complexity of the dot product in the higher dimensional space should be O(m^2). 
+        * The computational complexity after the kernel trick should be O(m). 
 5. Do we really have to compute the kernel function with every sample in the training set?
-6. Show that the kernel function is equal to the dot-product of the mapping function for two-dimensional vectors. 
-7. What is the default value of `k` in sklearn's implementation of K-Nearest Neighbors (KNN). Is this a good choice? Why
-or why not?
-8. How does KNN behave using k=1? What is the maximum value for k and how does it behave if you use it?
+    * Not sure, but you can probably vectorize it and do it all at once.
+6. Show that the kernel function is equal to the dot-product of the 
+mapping function for two-dimensional vectors. 
+7. What is the default value of `k` in sklearn's implementation of 
+K-Nearest Neighbors (KNN). Is this a good choice? Why or why not?
+8. How does KNN behave using k=1? What is the maximum value for k and 
+how does it behave if you use it?
+    * If you use k=1 then each point will be classified according to its' closest neighbor.
+    You get a bunch of different classes (a Voronoi diagram), and you have created a lookup table.
+    * If you use k=n (where n is the number of samples in the dataset) than that is the maximum.
+        * In the case when k=n, KNN will always predict the same class label (the most prevalent one).
 9. What is intuitively a good way to pick a value of `k`?
+    * K should be an odd number so that you cannot have a tie between 
+    classes. If you do choose an even k and have a tie,  then use a 
+    deterministic tie breaker (don't flip a coin).
+10. What is a lazy learner? Is KNN a lazy learner?
 
 ### Chapter Three: A tour of Machine Learning Classifiers Using Scikit-Learn (Decision Tree):
-1. The goal of an SVM is to pick questions that separate the items into groups that are "pure". How is class "purity"
-measured? How is the question decided which best splits the items?
-2. What does it mean for a group of items to be pure in regards to a decision tree? Why is this a good thing?
-3. If all of your test items ended up in the same leaf node of the decision tree, what would be the expected test accuracy?
-Why?
+1. The goal of an decision tree is to pick questions that separate the 
+items into groups that are "pure". How is class "purity" measured? How 
+is the question decided which best splits the items?
+2. What does it mean for a group of items to be pure in regards to a 
+decision tree? Why is this a good thing?
+3. If all of your test items ended up in the same leaf node of the 
+decision tree, what would be the expected test accuracy? Why?
 4. In order to compute a split, we need the data stored in the parent node. Does this mean we need a copy of the data in
 each node? Doesn't this require too much memory? Do we need to store the data after training?
 5. How many features should be considered for a split? How many thresholds?
