@@ -110,23 +110,59 @@ for the Logistic Regression classifier?
 1. Why is Logistic Regression poorly named?
     * Logistic regression is a classification methodology, not a regression methodology. 
 2. The optimization problem for SVM minimizes the length of the w vector under the following constraints MATH. Why do we
-prefer a w vector with a small norm? What does it mean if the minimization is less than, equal to, or greater than 1, respectively?
+prefer a w vector with a small norm? What does it mean if the minimization 
+is less than, equal to, or greater than 1, respectively?
+    * The w vector lies perpendicular to the support vectors in the SVM classifier.
+    Somewhat counter-intuitively the bigger that the w vector is, than the smaller the distance
+    between the two support vectors has to be. Since we wish to maximize the margin between the
+    support vectors, we want a w vector with a large norm. We wish to choose a w vector that will
+    make the support vectors as far apart as is possible.
+    * For every sample we apply the constraint that if z=0 it is on the decision boundary. If z=positive, then
+    the sample is above the respective boundary. Hence if z=1 it tells us that the sample is on the positive support vector.
+    If z=-1 it tells us that the sample is on the negative support vector.
 3. We have discussed several linear classifiers: Perceptron, Adaline, Logistic Regression, and Linear Support Vector Machines. 
 Given linearly separable classes, which classifiers are guaranteed to find a decision boundary that separates them?
+    * Given an appropriate learning rate, the perceptron learning algorithm is guaranteed to find a decision boundary.
+    * Given an appropriate learning rate, logistic regression is guaranteed to find a decision boundary.
+    * Given an appropriate learning rate, linear SVM is guaranteed to find a decision boundary.
+    * Adaline is not guaranteed to find a decision boundary however. Why?
+        * Good question, I need to recheck my notes.
 4. We have discussed several linear classifiers: Perceptron, Adaline, Logistic Regression, and Linear Support Vector Machines. 
 In general terms (no cost functions), how does each classifier define the "best" w vector?
+    * Perceptron tries to find the best w vector that classifies the most samples correctly.
+    * 
+    * Logistic regression minimizes the difference between the class labels and the sigmoid function.
+    * For linear SVM we want a w that maximizes the margin between the positive and negative support vectors.
 5. We have discussed several linear classifiers: Perceptron, Adaline, Logistic Regression, and Linear Support Vector Machines. 
 How does each classifier classify a new sample?
+    * All of these classifiers perform the same methodology, a new sample is classified as + or (1) if w^{T}x >= 0.
+    Otherwise the sample is classified as a -1.
+    * In essence, a sample is classified in relation to which side of the decision boundary it lies.
 6. What is standardization and which classifiers benefit from it?
+    * Standardization is process of transforming the training data to have a mean of zero and a standard deviation of 1 (unit variance). 
+    * All classifiers can benefit from this but it really depends on your data. Any feature that has a guassian distribution would be
+    a good candidate for standardization. If the feature does not follow a guassian distribution can be normalized or standardized via
+    other methodologies such as min-max scaling.
 7. What is regularization and which classifiers benefit from it?
+    * Regularization is a penalty for complexity. The goal is to minimize the vector norm of w. 
+    * Adaline, logistic regression, and linear SVM benefit from regularization.
+    * Perceptron does not really benefit from regularization because there isn't really a cost function
+    to minimize.
 8. If you add a regularization term to the Adaline cost function, what do you think might happen?
+    * Adding regularization term to the Adaline cost function would increase the size of the margin. You would decrease the complexity
+    of the classifier at the expense of your classification rate.
 9. Each of the classifiers (Perceptron, Adaline, Logistic Regression) use an activation function f(z) and compute errors
 either before or after applying the quantizer. Write the equation for the activation function and "before" or "after" to
 indicate when errors are computed for each of the classifiers specified above. 
 
 ### Chapter Three: A tour of Machine Learning Classifiers Using Scikit-learn (Nonlinear SVM, K-nearest Neighbors):
 1. What is a kernel method? What role does it play?
+    * A kernel method is a mapping function which can be used to project data into a different dimensional space wherein
+    it becomes possible to draw a decision boundary to separate classes. The kernel is an approximation of one vector to another vector
+    in a higher dimensional space. It can be helpful to think of the kernel as a similarity measure.
+    * The kernel method is prominent in nonlinear Support Vector Machines.
 2. What is the computational complexity of computing the dot product between two vectors?
+    * In teh quadratic space...
 3. What is the kernel trick? 
 4. How many terms are there after mapping to a third-order polynomial from m=2 dimensions? What is the big-O complexity
 of the dot-product in the higher dimensional space? What is the computational complexity after using the "kernel trick"?
@@ -135,6 +171,7 @@ of the dot-product in the higher dimensional space? What is the computational co
 7. What is the default value of `k` in sklearn's implementation of K-Nearest Neighbors (KNN). Is this a good choice? Why
 or why not?
 8. How does KNN behave using k=1? What is the maximum value for k and how does it behave if you use it?
+9. What is intuitively a good way to pick a value of `k`?
 
 ### Chapter Three: A tour of Machine Learning Classifiers Using Scikit-Learn (Decision Tree):
 1. The goal of an SVM is to pick questions that separate the items into groups that are "pure". How is class "purity"
